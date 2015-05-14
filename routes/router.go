@@ -7,9 +7,7 @@ import (
 
 func Init(app *app.App) *gin.Engine {
 
-	//router := gin.Default()
-	router := gin.New()
-	router.Use(gin.Recovery(), gin.Logger())
+	router := gin.Default()
 
 	router.Use(app.AppendEnv)
 
